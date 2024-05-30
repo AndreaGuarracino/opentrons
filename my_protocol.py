@@ -5,11 +5,11 @@ metadata = {
     'protocolName': 'My protocol',
     'author': 'Andrea Guarracino',
     'description': 'Protocol description',
-    'apiLevel': '2.15' # Only required field
+    'apiLevel': '2.17' # Only required field
 }
 
 # This function must be named exacly "run" with exactly one argument
-# which represents the robot and its capabilities. This context:
+# which represents the robot and its capabilities. The context:
 # - remembers, tracks, and checks the robot's state
 # - exposes the functions that make the robot execute actions
 def run(protocol: protocol_api.ProtocolContext):
@@ -23,14 +23,14 @@ def run(protocol: protocol_api.ProtocolContext):
     # https://labware.opentrons.com/corning_96_wellplate_360ul_flat/
     plate = protocol.load_labware(
         load_name='corning_96_wellplate_360ul_flat',
-        location='2',
+        location='1',
         label='Name-of-the-plate'
-    )  # Load Corning 96 Well Plate on Deck Position 2
+    )  # Load Corning 96 Well Plate on Deck Position 1
     
     # Groups of wells
-    all_wells = plate.wells()
     all_rows = plate.rows()
     all_cols = plate.columns()
+    all_wells = plate.wells()
 
     print(len(all_rows))
     print(len(all_cols))
