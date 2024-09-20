@@ -2,7 +2,9 @@
 
 ## Opentron App
 
-Donwload it from https://opentrons.com/ot-app/.
+Download it from https://opentrons.com/ot-app/.
+
+See https://support.opentrons.com/s/article/Troubleshooting-USB-connection-problems-on-Ubuntu for problems.
 
 ## Protocol simulator
 
